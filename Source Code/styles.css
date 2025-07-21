@@ -1,0 +1,43 @@
+:root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+        }
+        
+        .sidebar {
+            height: calc(100vh - 4rem);
+            position: sticky;
+            top: 4rem;
+        }
+
+        .content {
+            scroll-margin-top: 6rem;
+        }
+
+        .prose pre {
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose code:not(pre code) {
+            background-color: #f3f4f6;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+
+        .prose a {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .prose a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                height: auto;
+                position: static;
+            }
+        }
