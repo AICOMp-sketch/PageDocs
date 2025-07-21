@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Your Product Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="bg-gray-50 text-gray-800 flex min-h-screen flex-col">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e7ded0c3-9854-4079-9488-6bcf4fd52aa4.png" alt="Minimalist diamond-shaped logo in indigo color for Documentation Platform" class="h-10">
+                <h1 class="text-xl font-bold text-gray-900">Docs</h1>
+            </div>
+            
+            <div class="relative w-64">
+                <input type="text" placeholder="Search documentation..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                <div class="absolute right-3 top-2 text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+            </div>
+            
+            <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100">
+                <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 flex flex-1">
+        <!-- Sidebar -->
+        <aside class="w-64 py-6 pr-6 flex-shrink-0 sidebar">
+            <nav>
+                <ul class="space-y-1">
+                    <li>
+                        <a href="#getting-started" class="block px-3 py-2 rounded-lg font-medium text-indigo-700 bg-indigo-50">Getting Started</a>
+                    </li>
+                    <li>
+                        <a href="#installation" class="block px-3 py-2 rounded-lg font-medium hover:bg-gray-100">Installation</a>
+                    </li>
+                    <li>
+                        <a href="#configuration" class="block px-3 py-2 rounded-lg font-medium hover:bg-gray-100">Configuration</a>
+                    </li>
+                    <li>
+                        <a href="#api-reference" class="block px-3 py-2 rounded-lg font-medium hover:bg-gray-100">API Reference</a>
+                    </li>
+                    <li>
+                        <a href="#examples" class="block px-3 py-2 rounded-lg font-medium hover:bg-gray-100">Examples</a>
+                    </li>
+                    <li>
+                        <a href="#faq" class="block px-3 py-2 rounded-lg font-medium hover:bg-gray-100">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#changelog" class="block px-3 py-2 rounded-lg font-medium hover:bg-gray-100">Changelog</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="py-8 flex-1 prose max-w-4xl mx-auto">
+            <section id="getting-started" class="mb-16 content">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Getting Started</h2>
+                <p class="text-lg text-gray-600 mb-4">Welcome to our product documentation. This guide will help you quickly set up and start using our platform.</p>
+                
+                <p class="mb-4">Our product helps developers build better applications faster with a comprehensive set of tools and services. Whether you're building a small project or enterprise application, we've got you covered.</p>
+                
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-5 w-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-sm font-medium text-blue-800">Quick start</h3>
+                            <div class="mt-2 text-sm text-blue-700">
+                                <p>For those who want to jump right in, run <code>npm install our-package</code> and check the <a href="#examples" class="font-medium underline">examples</a> section.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Key Features</h3>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Simple and intuitive API</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Comprehensive documentation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>TypeScript support</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Active community support</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="installation" class="mb-16 content">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Installation</h2>
+                <p class="mb-4">Our package is available via npm and can be installed in your project with a single command.</p>
+                
+                <div class="flex space-x-4 mb-6">
+                    <div class="flex-1">
+                        <h3 class="font-semibold mb-2">npm</h3>
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg"><code class="language-bash">npm install our-package</code></pre>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold mb-2">yarn</h3>
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg"><code class="language-bash">yarn add our-package</code></pre>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Requirements</h3>
+                <p class="mb-2">Our package has the following requirements:</p>
+                <ul class="list-disc pl-6 mb-6">
+                    <li>Node.js 14 or later</li>
+                    <li>npm 6+ or yarn 1.22+</li>
+                    <li>Modern browser (Chrome, Firefox, Safari, Edge)</li>
+                </ul>
+                
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded mb-6">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-sm font-medium text-yellow-800">Production Build</h3>
+                            <div class="mt-2 text-sm text-yellow-700">
+                                <p>For production environments, make sure to minify and bundle your code. We recommend using tools like Webpack or Rollup.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="configuration" class="mb-16 content">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Configuration</h2>
+                <p class="mb-6">Our package can be configured with various options to suit your needs. Below is a list of all available configuration options.</p>
+                
+                <h3 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Basic Setup</h3>
+                <p class="mb-4">Here's how to configure the package with default options:</p>
+                
+                <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg mb-8"><code class="language-javascript">import { init } from 'our-package';
+
+const config = {
+    apiKey: 'YOUR_API_KEY',
+    environment: 'development',
+    debug: false,
+    timeout: 5000
+};
+
+init(config);</code></pre>
+                
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Configuration Options</h3>
+                <div class="overflow-x-auto mb-8">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Option</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Default</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">apiKey</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">string</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">-</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Your unique API key</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">environment</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">'development' | 'production'</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">'development'</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Set to production for live applications</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">debug</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">boolean</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">false</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Enable debug logging</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">timeout</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">number</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">5000</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Request timeout in milliseconds</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="api-reference" class="mb-16 content">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">API Reference</h2>
+                <p class="mb-6">The complete reference for all available methods and properties in our package.</p>
+                
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">init(config)</h3>
+                <div class="border border-gray-200 rounded-lg overflow-hidden mb-8">
+                    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+                        <h4 class="font-medium">Parameters</h4>
+                    </div>
+                    <div class="px-4 py-3">
+                        <p class="font-medium">config <span class="font-normal text-gray-600">(object)</span></p>
+                        <p class="mt-1 text-sm text-gray-600">Configuration object. See <a href="#configuration" class="text-indigo-600 hover:underline">Configuration</a> section for details.</p>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">fetchData(resource, [options])</h3>
+                <div class="border border-gray-200 rounded-lg overflow-hidden mb-6">
+                    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+                        <h4 class="font-medium">Parameters</h4>
+                    </div>
+                    <div class="px-4 py-3 border-b border-gray-200">
+                        <p class="font-medium">resource <span class="font-normal text-gray-600">(string)</span></p>
+                        <p class="mt-1 text-sm text-gray-600">The resource path to fetch (e.g., '/users').</p>
+                    </div>
+                    <div class="px-4 py-3">
+                        <p class="font-medium">options <span class="font-normal text-gray-600">(object, optional)</span></p>
+                        <p class="mt-1 text-sm text-gray-600">Request options:
+                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                <li><span class="font-medium">method</span> - HTTP method (default: 'GET')</li>
+                                <li><span class="font-medium">body</span> - Request body</li>
+                                <li><span class="font-medium">headers</span> - Additional headers</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <h4 class="text-xl font-semibold text-gray-800 mt-8 mb-4">Returns</h4>
+                <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg mb-8"><code class="language-typescript">Promise<ResponseData></code></pre>
+                
+                <h4 class="text-xl font-semibold text-gray-800 mb-2">Example</h4>
+                <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg mb-8"><code class="language-javascript">import { fetchData } from 'our-package';
+
+async function getUsers() {
+    try {
+        const users = await fetchData('/users');
+        console.log(users);
+    } catch (error) {
+        console.error('Error fetching users:', error);
+    }
+}</code></pre>
+            </section>
+
+            <section id="examples" class="mb-16 content">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Examples</h2>
+                <p class="mb-6">Practical examples demonstrating how to use our package in different scenarios.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+                            <h3 class="font-semibold">Basic Usage</h3>
+                        </div>
+                        <div class="p-4">
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg mb-4"><code class="language-javascript">import { init, fetchData } from 'our-package';
+
+init({
+    apiKey: 'your-api-key',
+    environment: 'production'
+});
+
+fetchData('/posts')
+    .then(data => console.log(data))
+    .catch(error => console.error(error));</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+                            <h3 class="font-semibold">Advanced Usage</h3>
+                        </div>
+                        <div class="p-4">
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg mb-4"><code class="language-javascript">import { fetchData } from 'our-package';
+
+async function createPost(post) {
+    try {
+        const response = await fetchData('/posts', {
+            method: 'POST',
+            body: JSON.stringify(post),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        return response;
+    } catch (error) {
+        throw error;
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Full Application Example</h3>
+                <p class="mb-4">Here's a complete example demonstrating how to use the package in a React application:</p>
+                
+                <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg mb-6"><code class="language-javascript">import React, { useEffect, useState } from 'react';
+import { init, fetchData } from 'our-package';
+
+function App() {
+    const [posts, setPosts] = useState([]);
+    
+    useEffect(() => {
+        init({
+            apiKey: 'your-api-key',
+            environment: 'development',
+            debug: true
+        });
+        
+        fetchData('/posts')
+            .then(data => setPosts(data))
+            .catch(console.error);
+    }, []);
+    
+    return (
+        <div>
+            <h1>Posts</h1>
+            {posts.map(post => (
+                <div key={post.id}>
+                    <h2>{post.title}</h2>
+                    <p>{post.body}</p>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+export default App;</code></pre>
+            </section>
+
+            <section id="faq" class="mb-16 content">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">FAQ</h2>
+                <p class="mb-6">Common questions and troubleshooting tips.</p>
+                
+                <div class="space-y-6 mb-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">How do I get an API key?</h3>
+                        <p class="text-gray-600">Sign up on our website and navigate to the API Keys section in your account settings. Click "Generate New Key" and follow the prompts.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">What browsers are supported?</h3>
+                        <p class="text-gray-600">Our package works in all modern browsers, including Chrome, Firefox, Safari, and Edge. We support the last two major versions of each browser.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">How can I contribute to this project?</h3>
+                        <p class="text-gray-600">We welcome contributions! Check out our <a href="#" class="text-indigo-600 hover:underline">GitHub repository</a> for contribution guidelines and instructions for submitting pull requests.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Is there a way to test in development mode?</h3>
+                        <p class="text-gray-600">Yes! Set <code>environment: 'development'</code> in your config object to enable development mode. This includes additional logging and uses the test API endpoint.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Got more questions?</h3>
+                        <p class="text-gray-600">Check out our <a href="#" class="text-indigo-600 hover:underline">Community Forum</a> or contact our support team at support@example.com.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="changelog" class="content">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Changelog</h2>
+                <p class="mb-6">All notable changes to this project will be documented in this section.</p>
+                
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">v1.1.0 - 2023-04-15</h3>
+                        <h4 class="font-medium text-gray-700 mb-2">Added</h4>
+                        <ul class="list-disc pl-6 mb-3 space-y-1">
+                            <li>New <code>retry</code> option for failed requests</li>
+                            <li>TypeScript type definitions</li>
+                        </ul>
+                        <h4 class="font-medium text-gray-700 mb-2">Fixed</h4>
+                        <ul class="list-disc pl-6 space-y-1">
+                            <li>Memory leak in request queue</li>
+                            <li>Error handling for invalid API responses</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">v1.0.0 - 2023-01-10</h3>
+                        <h4 class="font-medium text-gray-700 mb-2">Added</h4>
+                        <ul class="list-disc pl-6">
+                            <li>Initial release</li>
+                            <li>Core API functionality</li>
+                            <li>Basic documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200 py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f366d37a-22d6-43d7-ba2c-eb3cd31b5a86.png" alt="Stylish horizontal logo for Documentation Platform with indigo and gray colors" class="h-10">
+                </div>
+                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-sm">
+                    <a href="#" class="text-gray-600 hover:text-gray-900">GitHub</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">Community</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">Contact</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">Terms</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">Privacy</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 text-center text-sm text-gray-500">
+                <p>© 2023 Your Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
